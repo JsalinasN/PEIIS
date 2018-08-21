@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Attributes
+namespace PEIIS.Attributes
 {
     [AttributeUsage(AttributeTargets.All)]
     public class DisplayOrderAttribute : Attribute

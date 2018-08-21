@@ -1,6 +1,6 @@
 using System;
 
-namespace NimBaseNetCore20.Models
+namespace PEIIS.Models
 {
     public class ErrorViewModel
     {

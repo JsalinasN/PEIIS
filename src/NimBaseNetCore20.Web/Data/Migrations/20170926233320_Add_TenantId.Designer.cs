@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using NimBaseNetCore20.Data;
+using PEIIS.Data;
 using System;
 
-namespace NimBaseNetCore20.Data.Migrations
+namespace PEIIS.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20170926233320_Add_TenantId")]
@@ -129,7 +129,7 @@ namespace NimBaseNetCore20.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("NimBaseNetCore20.Models.ApplicationUser", b =>
+            modelBuilder.Entity("PEIIS.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -193,7 +193,7 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Models.ApplicationUser")
+                    b.HasOne("PEIIS.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -201,7 +201,7 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Models.ApplicationUser")
+                    b.HasOne("PEIIS.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -214,7 +214,7 @@ namespace NimBaseNetCore20.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("NimBaseNetCore20.Models.ApplicationUser")
+                    b.HasOne("PEIIS.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -222,7 +222,7 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Models.ApplicationUser")
+                    b.HasOne("PEIIS.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

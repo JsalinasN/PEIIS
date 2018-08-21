@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace NimBaseNetCore20.Data.Migrations
+namespace PEIIS.Data.Migrations
 {
     public partial class Create_Tenant_TenantType : Migration
     {

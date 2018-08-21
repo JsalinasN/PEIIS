@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Services
+namespace PEIIS.Services
 {
     public static class EmailSenderExtensions
     {

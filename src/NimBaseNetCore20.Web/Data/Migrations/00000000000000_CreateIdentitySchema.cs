@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Logging;
 
-namespace NimBaseNetCore20.Data.Migrations
+namespace PEIIS.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

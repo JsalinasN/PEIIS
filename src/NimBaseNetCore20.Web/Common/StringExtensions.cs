@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Common
+namespace PEIIS.Common
 {
     /// <summary>
     /// This class was taken from a different source.

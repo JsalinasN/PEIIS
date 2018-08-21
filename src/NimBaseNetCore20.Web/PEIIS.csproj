@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AssemblyName>NimBaseNetCore20</AssemblyName>
+    <AssemblyName>PEIIS.Web</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>NimBaseNetCore20</PackageId>
+    <PackageId>Personity.Web</PackageId>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
-    <RootNamespace>NimBaseNetCore20</RootNamespace>
-    <Authors>Nim Technologies SA de CV</Authors>
-    <Company>Nim Technologies SA de CV</Company>
+    <RootNamespace>PEIIS</RootNamespace>
+    <Authors>Switch Studios SA de CV</Authors>
+    <Company>Switch Studios SA de CV</Company>
     <Product>Web Base Project .Net Core 2.0</Product>
   </PropertyGroup>
 

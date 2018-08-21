@@ -10,12 +10,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using NimBaseNetCore20.Models;
-using NimBaseNetCore20.Models.AccountViewModels;
-using NimBaseNetCore20.Domain;
-using NimBaseNetCore20.Services;
+using PEIIS.Models;
+using PEIIS.Models.AccountViewModels;
+using PEIIS.Domain;
+using PEIIS.Services;
 
-namespace NimBaseNetCore20.Controllers
+namespace PEIIS.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

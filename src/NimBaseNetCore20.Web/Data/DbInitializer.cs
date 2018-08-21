@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NimBaseNetCore20.Domain;
+using PEIIS.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Data
+namespace PEIIS.Data
 {
     public class DbInitializer
     {
@@ -37,7 +37,7 @@ namespace NimBaseNetCore20.Data
                     logger.LogInformation("Role " + roleName + " created");
             }
 
-            var userName = "admin@nimtech.com.mx";
+            var userName = "admin@switchstudios.com.mx";
            if (!context.Users.Any(m => m.UserName == userName))
             {
                 var userManager = applicationBuilder.ApplicationServices.GetRequiredService<UserManager<ApplicationUser>>();

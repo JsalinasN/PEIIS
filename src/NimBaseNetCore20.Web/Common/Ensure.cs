@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Common
+namespace PEIIS.Common
 {
     // Credits: Zack Owens (http://weblogs.asp.net/zowens/)
 

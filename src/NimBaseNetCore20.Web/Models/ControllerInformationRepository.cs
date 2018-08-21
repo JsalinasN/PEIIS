@@ -1,5 +1,5 @@
-﻿using NimBaseNetCore20.Attributes;
-using NimBaseNetCore20.Common;
+﻿using PEIIS.Attributes;
+using PEIIS.Common;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Models
+namespace PEIIS.Models
 {
     /// <summary>
     /// Dynamically get a list of the controllers and actions for the AdminLTE demo

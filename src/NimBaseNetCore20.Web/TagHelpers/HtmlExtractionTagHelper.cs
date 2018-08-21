@@ -16,7 +16,7 @@ Usage:
 </html-extraction
 */
 
-namespace NimBaseNetCore20.TagHelpers
+namespace PEIIS.TagHelpers
 {
     /// <summary>
     /// TagHelper used to extract section of a local html file.

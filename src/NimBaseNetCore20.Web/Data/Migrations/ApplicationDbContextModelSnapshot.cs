@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using NimBaseNetCore20.Data;
+using PEIIS.Data;
 using System;
 
-namespace NimBaseNetCore20.Data.Migrations
+namespace PEIIS.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -128,7 +128,7 @@ namespace NimBaseNetCore20.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("NimBaseNetCore20.Domain.ApplicationUser", b =>
+            modelBuilder.Entity("PEIIS.Domain.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -182,7 +182,7 @@ namespace NimBaseNetCore20.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("NimBaseNetCore20.Domain.Tenant", b =>
+            modelBuilder.Entity("PEIIS.Domain.Tenant", b =>
                 {
                     b.Property<Guid>("TenantId")
                         .ValueGeneratedOnAdd();
@@ -215,7 +215,7 @@ namespace NimBaseNetCore20.Data.Migrations
                     b.ToTable("Tenants");
                 });
 
-            modelBuilder.Entity("NimBaseNetCore20.Domain.TenantType", b =>
+            modelBuilder.Entity("PEIIS.Domain.TenantType", b =>
                 {
                     b.Property<int>("TenantTypeId")
                         .ValueGeneratedOnAdd();
@@ -254,7 +254,7 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Domain.ApplicationUser")
+                    b.HasOne("PEIIS.Domain.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -262,7 +262,7 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Domain.ApplicationUser")
+                    b.HasOne("PEIIS.Domain.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -275,7 +275,7 @@ namespace NimBaseNetCore20.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("NimBaseNetCore20.Domain.ApplicationUser")
+                    b.HasOne("PEIIS.Domain.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -283,15 +283,15 @@ namespace NimBaseNetCore20.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Domain.ApplicationUser")
+                    b.HasOne("PEIIS.Domain.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("NimBaseNetCore20.Domain.Tenant", b =>
+            modelBuilder.Entity("PEIIS.Domain.Tenant", b =>
                 {
-                    b.HasOne("NimBaseNetCore20.Domain.TenantType", "TenantType")
+                    b.HasOne("PEIIS.Domain.TenantType", "TenantType")
                         .WithMany("Tenants")
                         .HasForeignKey("TenantTypeId")
                         .OnDelete(DeleteBehavior.Cascade);

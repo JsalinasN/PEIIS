@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NimBaseNetCore20.Data;
-using NimBaseNetCore20.Models;
+using PEIIS.Data;
+using PEIIS.Models;
 using Microsoft.AspNetCore.Authorization;
-using NimBaseNetCore20.Models.AccountViewModels;
-using NimBaseNetCore20.Domain;
+using PEIIS.Models.AccountViewModels;
+using PEIIS.Domain;
 using Microsoft.AspNetCore.Identity;
 
-namespace NimBaseNetCore20.Web.Controllers
+namespace PEIIS.Web.Controllers
 {
     [Authorize(Roles = "ADMINISTRATOR")]
     public class ApplicationUsersController : Controller

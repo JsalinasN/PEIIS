@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Domain
+namespace PEIIS.Domain
 {
     public class Tenant : AuditData
     {

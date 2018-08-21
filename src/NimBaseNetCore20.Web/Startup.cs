@@ -11,14 +11,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.IO.Compression;
-using NimBaseNetCore20.Data;
-using NimBaseNetCore20.Domain;
-using NimBaseNetCore20.Models;
-using NimBaseNetCore20.Services;
+using PEIIS.Data;
+using PEIIS.Domain;
+using PEIIS.Models;
+using PEIIS.Services;
 using Newtonsoft.Json.Serialization;
 using System.Globalization;
 
-namespace NimBaseNetCore20
+namespace PEIIS
 {
     public class Startup
     {

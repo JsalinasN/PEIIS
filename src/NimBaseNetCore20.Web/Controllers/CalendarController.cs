@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NimBaseNetCore20.Attributes;
+using PEIIS.Attributes;
 
-namespace NimBaseNetCore20.Controllers
+namespace PEIIS.Controllers
 {
     [DisplayOrder(7)]
     [DisplayImage("")]

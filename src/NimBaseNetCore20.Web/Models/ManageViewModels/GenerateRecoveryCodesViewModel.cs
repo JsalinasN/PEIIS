@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NimBaseNetCore20.Models.ManageViewModels
+namespace PEIIS.Models.ManageViewModels
 {
     public class GenerateRecoveryCodesViewModel
     {

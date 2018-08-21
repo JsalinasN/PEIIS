@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NimBaseNetCore20.Data;
-using NimBaseNetCore20.Domain;
+using PEIIS.Data;
+using PEIIS.Domain;
 
-namespace NimBaseNetCore20.Web.Controllers
+namespace PEIIS.Web.Controllers
 {
     public class TenantTypesController : Controller
     {
