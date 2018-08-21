@@ -1,0 +1,19 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "jquery": "3.2.1",
+    "jquery-validation": "1.17.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "seiyria-bootstrap-slider": "v9.8.1",
+    "photoswipe": "v4.1.2"
+  },
+  "resolutions": {
+    "bootstrap": "v4.0.0-beta",
+    "jquery": "3.2.1",
+    "jquery-validation": "1.17.0",
+    "photoswipe": "v4.1.2",
+    "seiyria-bootstrap-slider": "v9.8.1"
+  }
+}
