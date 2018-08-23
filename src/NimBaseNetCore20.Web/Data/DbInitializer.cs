@@ -26,19 +26,27 @@ namespace PEIIS.Data
 
         private async static Task InitializeAdministrator(IApplicationBuilder applicationBuilder, ApplicationDbContext context)
         {
-            var logger = applicationBuilder.ApplicationServices.GetRequiredService<ILogger<DbInitializer>>();
-            var roleName = "ADMINISTRATOR";
+             
 
-            if (!context.Roles.Any(m => m.Name == roleName))
+            var logger = applicationBuilder.ApplicationServices.GetRequiredService<ILogger<DbInitializer>>();
+            List<string> roleNames = new List<string>()
             {
-                var roleManager = applicationBuilder.ApplicationServices.GetRequiredService<RoleManager<IdentityRole>>();
-                var result = await roleManager.CreateAsync(new IdentityRole(roleName));
-                if (result.Succeeded)
-                    logger.LogInformation("Role " + roleName + " created");
-            }
+                "ADMINISTRATOR",
+                "MEDICO",
+                "PACIENTE"
+            };
+
+            foreach (var rol in roleNames)
+                if (!context.Roles.Any(m => m.Name == rol))
+                {
+                    var roleManager = applicationBuilder.ApplicationServices.GetRequiredService<RoleManager<IdentityRole>>();
+                    var result = await roleManager.CreateAsync(new IdentityRole(rol));
+                    if (result.Succeeded)
+                        logger.LogInformation("Role " + rol + " created");
+                }
 
             var userName = "admin@switchstudios.com.mx";
-           if (!context.Users.Any(m => m.UserName == userName))
+            if (!context.Users.Any(m => m.UserName == userName))
             {
                 var userManager = applicationBuilder.ApplicationServices.GetRequiredService<UserManager<ApplicationUser>>();
                 var user = new ApplicationUser { UserName = userName, Email = userName };
@@ -46,12 +54,48 @@ namespace PEIIS.Data
                 var result = await userManager.CreateAsync(user, "Password1.");
                 if (result.Succeeded)
                 {
-                    logger.LogInformation("Desault user " + user.UserName + " created");
-                    var assignRoleResult = await userManager.AddToRoleAsync(await userManager.FindByNameAsync(user.UserName), roleName);
+                    logger.LogInformation("Default user " + user.UserName + " created");
+                    var assignRoleResult = await userManager.AddToRoleAsync(await userManager.FindByNameAsync(user.UserName), "ADMINISTRATOR");
                     if (assignRoleResult.Succeeded)
-                        logger.LogInformation("Role " + roleName + " assigned to user " + user.UserName);
+                        logger.LogInformation("Role ADMINISTRATOR assigned to user " + user.UserName);
                 }
             }
+
+            userName = "medico@switchstudios.com.mx";
+            if (!context.Users.Any(m => m.UserName == userName))
+            {
+                var userManager = applicationBuilder.ApplicationServices.GetRequiredService<UserManager<ApplicationUser>>();
+                var user = new ApplicationUser { UserName = userName, Email = userName };
+
+                var result = await userManager.CreateAsync(user, "Password1.");
+                if (result.Succeeded)
+                {
+                    logger.LogInformation("Default user " + user.UserName + " created");
+                    var assignRoleResult = await userManager.AddToRoleAsync(await userManager.FindByNameAsync(user.UserName), "MEDICO");
+                    if (assignRoleResult.Succeeded)
+                        logger.LogInformation("Role Medico assigned to user " + user.UserName);
+                }
+            }
+            userName = "paciente@switchstudios.com.mx";
+            if (!context.Users.Any(m => m.UserName == userName))
+            {
+                var userManager = applicationBuilder.ApplicationServices.GetRequiredService<UserManager<ApplicationUser>>();
+                var user = new ApplicationUser { UserName = userName, Email = userName };
+
+                var result = await userManager.CreateAsync(user, "Password1.");
+                if (result.Succeeded)
+                {
+                    logger.LogInformation("Default user " + user.UserName + " created");
+                    var assignRoleResult = await userManager.AddToRoleAsync(await userManager.FindByNameAsync(user.UserName), "PACIENTE");
+                    if (assignRoleResult.Succeeded)
+                        logger.LogInformation("Role Paciente assigned to user " + user.UserName);
+                }
+            }
+
+
+
+
+
         }
     }
 }

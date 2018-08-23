@@ -14,7 +14,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 2 | Log in</title>
+        <title>PEIIS | Inicio de Sesión</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" href="~/lib/AdminLTE-2.3.11/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -25,45 +25,57 @@
     <body class="hold-transition login-page" style="height:auto">
         <div class="login-box">
             <div class="login-logo">
-                <a href="~/lib/AdminLTE-2.3.11/index2.html"><b>Admin</b>LTE</a>
+                <a href="~/lib/AdminLTE-2.3.11/index2.html"><b>PEIIS</b></a>
+                 
             </div>
             <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
-
+                <img style="width:100%;" src="~/images/logo-secretaria-salud.png" />
+                <p class="login-box-msg">Pantilla Electrónica de Integración de Información en Salud.</p>
                 <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <div class="form-group has-feedback">
-                        <input  asp-for="Email" type="email" class="form-control" placeholder="Email">
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="Email">
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
                         <input asp-for="Password" type="password" class="form-control" placeholder="Password">
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <div class="row">
-                        <div class="col-xs-8">
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">INGRESAR</button>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
                             <div class="checkbox icheck">
                                 <label asp-for="RememberMe">
                                     <input asp-for="RememberMe" type="checkbox"> @Html.DisplayNameFor(m => m.RememberMe)
                                 </label>
                             </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                        </div>
+                        </div> 
                     </div>
                 </form>
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
-                        <i class="fa fa-facebook"></i> Sign in usign Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-social btn-google btn-flat">
-                        <i class="fa fa-google"></i> Sign in using Google
-                    </a>
+                @*<div class="social-auth-links text-center">
+            <p>- O -</p>
+            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
+                <i class="fa fa-facebook"></i> Inicie sesión con Facebook
+            </a>
+            <a href="#" class="btn btn-block btn-social btn-google btn-flat">
+                <i class="fa fa-google"></i>
+                Inicie sesión con Google
+            </a>
+        </div>*@
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a asp-action="ForgotPassword"><small><u>Olvidé mi contraseña</u></small></a><br>
+                    </div>
+                    <div class="col-xs-6">
+                        <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center"><small><u>Registra una nueva cuenta</u></small></a>
+                    </div>
                 </div>
-                <a asp-action="ForgotPassword">I forgot my password</a><br>
-                <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">Register a new membership</a>
+               
+                
             </div>
         </div>
         <script src="~/lib/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -80,3 +92,27 @@
         </script>
     </body>
 </html>
+
+
+<style>
+    .login-box-body {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s; 
+        border-radius: 23px;
+    }
+
+    .login-box-body:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .login-box-body {
+        padding: 2px 16px;
+    }
+    .login-page, .register-page {
+        background: #ffffff;
+    }
+</style>

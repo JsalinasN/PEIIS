@@ -97,10 +97,15 @@ namespace PEIIS
 
             // Add framework services.
             services.AddMvc();
-
+            //services.AddMvc().AddRazorPagesOptions(options =>
+            //{
+            //    options.Conventions.AddPageRoute("/Account/Login", "");
+            //});
             //Add the ControllerInformationRepository
             services.AddSingleton<IControllerInformationRepository, ControllerInformationRepository>();
             return services.BuildServiceProvider();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -122,8 +127,7 @@ namespace PEIIS
 
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseResponseCompression();
-
+            app.UseResponseCompression(); 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -133,5 +137,7 @@ namespace PEIIS
 
             DbInitializer.Initialize(app);
         }
+
+        
     }
 }
