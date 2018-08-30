@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PEIIS.Attributes;
 
@@ -9,6 +10,7 @@ using PEIIS.Attributes;
 
 namespace PEIIS.Controllers
 {
+    [Authorize(Roles = "ADMINISTRATOR")]
     [DisplayOrder(10)]
     [DisplayImage("")]
     [TreeViewSettings("")]

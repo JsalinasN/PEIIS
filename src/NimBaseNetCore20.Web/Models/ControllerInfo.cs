@@ -15,6 +15,8 @@ namespace PEIIS.Models
         public List<ActionInfo> ControllerActions { get; set; }
         public TreeViewAttribute TreeViewSettings { get; set; }
         public TreeViewSettingsAttribute TreeViewSettings2 { get; set; }
+        public bool HasAuthorize { get; internal set; }
+        public string[] AuthorizedRoles { get; internal set; }
     }
 
 }

@@ -18,7 +18,7 @@ namespace PEIIS.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             //Todo: Return allowed queues and counters.
-            var items = await Task.Run(() => _controllerList.GetAll());
+            var items = await Task.Run(() => _controllerList.GetAllForUsername(User.Identity.Name));
             return View(items);
         }
     }

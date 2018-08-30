@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PEIIS.Attributes;
 
 namespace PEIIS.Controllers
 {
+    [Authorize(Roles = "ADMINISTRATOR")]
     [DisplayOrder(3)]
     [DisplayImage("fa fa-pie-chart")]
     [TreeView("i", "fa fa-angle-left pull-right", "")]

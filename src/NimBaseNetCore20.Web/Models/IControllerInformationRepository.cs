@@ -8,5 +8,7 @@ namespace PEIIS.Models
     public interface IControllerInformationRepository
     {
         List<ControllerInfo> GetAll();
+
+        List<ControllerInfo> GetAllForUsername(string username);
     }
 }

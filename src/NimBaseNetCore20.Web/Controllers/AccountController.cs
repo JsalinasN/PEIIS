@@ -17,7 +17,7 @@ using PEIIS.Services;
 
 namespace PEIIS.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "ADMINISTRATOR")]
     [Route("[controller]/[action]")]
     public class AccountController : Controller
     {

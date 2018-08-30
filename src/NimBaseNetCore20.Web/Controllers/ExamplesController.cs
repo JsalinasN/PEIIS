@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PEIIS.Attributes;
 
 namespace PEIIS.Controllers
 {
+    [Authorize(Roles = "ADMINISTRATOR")]
     [DisplayOrder(9)]
     [DisplayImage("fa fa-folder")]
     //[TreeViewSettings("small|label pull-right bg-yellow|12", "small|label pull-right bg-green|16", "small|label pull-right bg-red|5")]

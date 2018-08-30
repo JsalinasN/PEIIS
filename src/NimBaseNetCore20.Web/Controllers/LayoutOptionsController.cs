@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PEIIS.Attributes;
 
 namespace PEIIS.Controllers
 {
+    [Authorize(Roles = "ADMINISTRATOR")]
     [DisplayOrder(1)]
     [DisplayImage("fa fa-files-o")]
     //[TreeView("span", "label label-primary pull-right", "4")]
