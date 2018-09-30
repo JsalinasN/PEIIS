@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using PEIIS.Data;
 using System.ComponentModel;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using DisplayNameAttribute = PEIIS.Attributes.DisplayNameAttribute;
+using Microsoft.AspNetCore.Identity; 
 
 namespace PEIIS.Models
 {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PEIIS.Domain;
 
 namespace PEIIS.Data
 {
@@ -22,10 +23,10 @@ namespace PEIIS.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<PEIIS.Domain.ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
-        public DbSet<PEIIS.Domain.Tenant> Tenants { get; set; }
+        public DbSet<Tenant> Tenants { get; set; }
 
-        public DbSet<PEIIS.Domain.TenantType> TenantTypes { get; set; }
+        public DbSet<TenantType> TenantTypes { get; set; }
     }
 }
